@@ -1,0 +1,47 @@
+    /*
+    Scaffold(
+      appBar: AppBar(),
+      body: SingleChildScrollView(
+          child:
+        Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: <Widget> [  
+        Container(
+          padding: EdgeInsets.all(8),
+          margin: EdgeInsets.all(8),
+        ),
+        Column(
+          children: [
+                        ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: Colors.red,
+              ),
+              child: Text('LoadAlldocs'),
+              onPressed: () async {
+                // 指定コレクションのドキュメント一覧を取得
+                final snapshot = await FirebaseFirestore.instance
+                    .collection('questions')
+                    .get();
+                // ドキュメント一覧を配列で格納
+                setState(() {
+                  documentList = snapshot.docs;
+                });
+              },
+            ),
+             // ドキュメント情報を表示
+            Column(
+              children: documentList.map((document) {
+                return QandA(
+                  question:document["question"],
+                  answer:document["answer"]
+                );
+              }).toList(),
+            ),
+            
+          ],
+        ),
+        ],
+      ),
+      ),
+    );
+    */
