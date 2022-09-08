@@ -133,7 +133,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 Text(_question)
               ),
             ):Text("NowLoading..."),
-          
+          Container(
+              margin: EdgeInsets.all(14),
+            ),
           ElevatedButton(
               onPressed: () {
                 Navigator.push(context,MaterialPageRoute(builder: ((context) => AnswerPage(question: _question,docID: _docID,answer:_answers,) )));

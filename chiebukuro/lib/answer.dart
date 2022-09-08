@@ -147,15 +147,19 @@ bool _isEnabled = false;
                 onPrimary: Colors.pink
               ),
               child: Text(
-              '回答を投稿',
+              'この質問に回答する',
               style: TextStyle(
                   color: Colors.white
                 ),
               )
             ),
-          )
+          ),
+          Container(
+              margin: EdgeInsets.all(20),
+            ),
           ]
         ),
+        
       ),
     );
   }

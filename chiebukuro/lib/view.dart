@@ -134,13 +134,21 @@ class QandA extends StatelessWidget {
                     Text(answer.length==0?"":answer[answer.length-1])
                   ),
                 ),
-//                 Align(
-//   alignment: Alignment.topRight, //右寄せの指定
-//   child: ElevatedButton(
-//     onPressed: () {},
-//     child: Text('Button'),
-//   ),
-// ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children:[
+                    Text(
+                      "他の回答を見る"
+                      ),
+                    Icon(
+                      Icons.double_arrow,
+                      color: Colors.pink,
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(8),
+                    ),
+                      ],
+                ),
                 Container(
           padding: EdgeInsets.all(8),
           margin: EdgeInsets.all(0),
